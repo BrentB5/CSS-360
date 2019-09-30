@@ -1,0 +1,20 @@
+Assignment #2
+
+1. Find the details of male members from the data file.
+	Script: Grep -n 'male' data.txt
+2. Find the details of members whose name starts with either 'A' or 'K'.
+	Script: Grep "/^([A]|[K])*$" data.txt
+3. Write a command to find only phone numbers from the data file.
+	Script: number = $(Grep "$name" telephone | cut-d ";" -f2)
+4. Store the data of each column to a new file and name the file as per the column name.
+	Script:
+5. Write a command to count the total number of members in the file.
+	Script: wc-1
+6. Replace all ".com" string with ".org"
+	Script: $SED -I -e 's/.com/.org/g' data.txt
+7. Parenthesize first character of the first and last name of each member.
+	Script: $SED 's/\(\b[A-Z]\)/\(\1\)/g' data.txt
+8. Write a command to delete a particular line (say the 10th line) from a file.
+	Script: $SED '(n)d' file (n being the number line you wish deleted)
+9. Number each line of a file.
+	Script:$Grep -n ^ data.txt
